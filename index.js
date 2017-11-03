@@ -4,7 +4,7 @@
  * External dependencies
  */
 
-var FastClick = require('fastclick').FastClick;
+var FastClick = require('fastclick');
 var FtDomDelegate = require('dom-delegate').Delegate;
 
 /**
@@ -46,7 +46,7 @@ function SelectiveFastClick(layer, selectors) {
     });
   };
 
-  this.fastclick = new FastClick(delegate);
+  this.fastclick = FastClick.attach(delegate);
 
   // Copy the Android 2.3 hack
   if (typeof layer.onclick === 'function') {
